@@ -42,6 +42,7 @@ export default {
   align-items: center;
   display: flex;
   justify-content: space-around;
+  background: #F7F9FA;
 }
 .home footer .home-foot{
   display: flex;
