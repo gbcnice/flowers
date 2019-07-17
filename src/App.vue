@@ -7,4 +7,7 @@
 </template>
 
 <style>
+body{
+      background: #E9ECF0;
+}
 </style>
