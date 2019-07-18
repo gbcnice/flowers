@@ -5,6 +5,8 @@ import store from './store'
 import './assets/flexble.js'
 import './assets/index.css'
 import '../public/iconfont/iconfont.css'
+import Axios from 'axios'
+Vue.prototype.$axios=Axios
 Vue.config.productionTip = false
 
 new Vue({

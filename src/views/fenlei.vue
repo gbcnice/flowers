@@ -1,7 +1,7 @@
 <template>
     <div class="fenlei">
         <div class="fenlei-head">
-            <span class="fenlei-search"><</span>
+            <span class="fenlei-search"></span>
             <div class="fenlei-input">
                 <i></i>
                 <input type="text" value="请输入关键词">
