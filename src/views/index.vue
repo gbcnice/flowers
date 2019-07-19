@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 import myFooter from './myFooter'
 import Indexfooter from './indexfooter'
 export default {

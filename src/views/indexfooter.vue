@@ -25,6 +25,10 @@
                     <a href="#">常见问题</a>
                     <a href="#">关于我们</a>
               </div>
+              <!-- <p class="footer-copyright">
+                  Copyright © 2005~2019 花礼网（中国鲜花礼品网）版权所有<br>
+                  中国鲜花网领先品牌，鲜花速递专家！
+              </p> -->
               <div class="phone">
                      <a href="#">
                          <span class="iconfont">&#xe631;</span>
@@ -35,10 +39,7 @@
                          <p>客服</p>
                      </a>
               </div>
-              <p class="footer-copyright">
-                  Copyright © 2005~2019 花礼网（中国鲜花礼品网）版权所有<br>
-                  中国鲜花网领先品牌，鲜花速递专家！
-              </p>
+              
          </div>
 
     </div>    
