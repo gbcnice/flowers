@@ -5,6 +5,7 @@ import Index from './views/index.vue'
 import Fenlei from './views/fenlei.vue'
 import Car from './views/car.vue'
 import My from './views/my.vue'
+import indexDetail from './views/indexDetail.vue'
 import Secdetail from './views/secdetail.vue'
  
 Vue.use(Router)
@@ -16,6 +17,11 @@ export default new Router({
     {
       path: '/',
       redirect:{name:'home'}
+    },
+    {
+      path: '/indexDetail',
+      name: 'indexDetail',
+      component: indexDetail
     },
     {
       path: '/secdetail/:id',

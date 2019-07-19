@@ -83,7 +83,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../assets/reset.scss";
 .fenlei-head{
     padding: 0.1rem;

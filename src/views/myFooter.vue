@@ -96,7 +96,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
    .toubu-daohang{
     width: 100%;
     height: .96rem;

@@ -1,12 +1,19 @@
 <template>
     <div class="index">
-        首页
+      <myFooter />
+    <Indexfooter/>
     </div>
 </template>
 
 <script>
-export default {
 
+import myFooter from './myFooter'
+import Indexfooter from './indexfooter'
+export default {
+   components:{
+     Indexfooter,
+     myFooter
+   }
 }
 </script>
 
