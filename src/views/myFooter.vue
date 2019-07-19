@@ -83,6 +83,17 @@
                     </li>
                 </ul>
             </div>
+            <div class="yimianxuanhuo-rxtj">
+                <ul>
+                    <li class="yimianxuanhua-rexiaobang">
+                        <span>热销榜</span><br>
+                        <span>集万千宠爱</span>
+                    </li>
+                    <li class="yimianxuanhua-tejia">
+
+                    </li>
+                </ul>
+            </div>
             </div>
     </div>    
 </template>
@@ -205,6 +216,23 @@ export default {
         position: relative;
         top: -1.7rem;
         left: .4rem;
+    }
+    .yimiaoxuanhua .yimianxuanhuo-rxtj ul{
+        margin-left:.1rem; 
+    }
+    .yimiaoxuanhua .yimianxuanhuo-rxtj ul .yimianxuanhua-rexiaobang{
+        float: left;
+        width: 3.64rem;
+        height: 3.2rem;
+        background: url(https://img02.hua.com/m/home/img/m_home_ranklist.png?0718) no-repeat center;
+        background-size:100%;
+    }
+     .yimiaoxuanhua .yimianxuanhuo-rxtj ul .yimianxuanhua-tejia{
+         float: left;
+        width: 3.64rem;
+        height: 3.2rem;
+        background: url(https://img02.hua.com/m/home/img/m_home_ranklist.png?0718) no-repeat center;
+        background-size:100%;
     }
 
 
