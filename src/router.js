@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Index from './views/index.vue'
-import Fenlei from './views/fenlei.vue'
-import Car from './views/car.vue'
-import My from './views/my.vue'
 import indexDetail from './views/indexDetail.vue'
 import Secdetail from './views/secdetail.vue'
- 
+import Detail from "./components/detail.vue"
+const Car = () => import('./views/car.vue')
+const Fenlei = () => import('./views/fenlei.vue')
+const Index = () => import('./views/index.vue')
+const My = () => import('./views/my.vue')
+
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +28,11 @@ export default new Router({
       path: '/secdetail/:id',
       name: 'secdetail',
       component: Secdetail
+    },
+    {
+      path: '/detail/:id/:num',
+      name: 'detail',
+      component:Detail
     },
     {
       path: '/home',

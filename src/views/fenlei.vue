@@ -1,7 +1,7 @@
 <template>
     <div class="fenlei">
         <div class="fenlei-head">
-            <span class="fenlei-search iconfont" @click="back">&#xe517;</span>
+            <v-touch class="fenlei-search iconfont" @tap="back">&#xe517;</v-touch>
             <div class="fenlei-input">
                 <i class="iconfont">&#xe63c;</i>
                 <input type="text" value="请输入关键词">
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import qs from 'qs'
 export default {
     data() {
         return{
@@ -50,9 +51,15 @@ export default {
             if(!this.type)
             this.type = "hot"
             this.$axios.get("http://localhost:4000/"+this.type).then((res)=>{
-                console.log(res.data[0])
+                // console.log(res.data[0])
                 this.list = res.data[0];
             })
+            let params = {
+                itemcodes:9010966
+            }
+            // this.$axios.post("/flower/home/GetProductListPrice",qs.stringify(params)).then((req)=>{
+            //     console.log(req)
+            // })
         },
         back() {
             this.$router.push("/");
@@ -62,7 +69,7 @@ export default {
         },
         changeindex(index) {
             this.current = index
-            console.log(this.current)
+            // console.log(this.current)
         }
     }, 
     watch:{

@@ -205,31 +205,325 @@
     "secdetail":[
         {
             "id":1,
-            "text":"蛋糕"
+            "text":"蛋糕",
+            "fenlei":[
+                {
+                    "fl":"元祖",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/5302015.jpg_220x240.jpg",
+                    "Cpmc": "水果之恋(8寸)",
+                    "Instro": "元祖鲜奶蛋糕，布丁水果夹层",
+                    "ItemCode": "5302015",
+                    "LinePrice": 358,
+                    "Price": 258
+                },
+                {
+                    "fl":"窝夫小子",
+                    "style":"畅销爆款",
+                    "url":"https://img01.hua.com/uploadpic/newpic/5302066.jpg_220x240.jpg",
+                    "Cpmc": "情有独钟(8寸)",
+                    "Instro": "元祖鲜奶蛋糕",
+                    "ItemCode": "5302066",
+                    "LinePrice": 358,
+                    "Price": 258
+                },
+                {
+                    "fl":"元祖",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/5302019.jpg_220x240.jpg",
+                    "Cpmc": "Nice兔meet you！(8寸)",
+                    "Instro": "元祖鲜奶蛋糕，布丁加水果夹层",
+                    "ItemCode": "5302019",
+                    "LinePrice": 358,
+                    "Price": 258  
+                },
+                {
+                    "fl":"21CAKE",
+                    "style":"",
+                    "url":"https://img01.hua.com/uploadpic/newpic/5222025.jpg_220x240.jpg",
+                    "Cpmc": "芒果奶油蛋糕(2磅)",
+                    "Instro": "乳脂奶油蛋糕",
+                    "ItemCode": "5222025",
+                    "LinePrice": 198,
+                    "Price": 198
+                } 
+            ]
         },
         {
             "id":2,
-            "text":"永生花"
+            "text":"永生花",
+            "fenlei":[
+                {
+                    "fl":"送女友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg",
+                    "Cpmc": "花好月圆永生花台灯",
+                    "Instro": "精选进口奥斯汀永生玫瑰台灯",
+                    "ItemCode": "1073247",
+                    "LinePrice": 398,
+                    "Price": 298
+                },
+                {
+                    "fl":"送男性",
+                    "style":"畅销爆款",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg",
+                    "Cpmc": "我如此爱你-口红款520",
+                    "Instro": "Dior#520口红(专柜正品)＋进口永生玫瑰礼盒",
+                    "ItemCode": "1073186",
+                    "LinePrice": 788,
+                    "Price": 588
+                },
+                {
+                    "fl":"送朋友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073253.jpg_220x240.jpg",
+                    "Cpmc": "花漾年华-迪奥香水款30ml",
+                    "Instro": "Miss Dior花漾淡香氛",
+                    "ItemCode": "1073253",
+                    "LinePrice": 899,
+                    "Price": 799  
+                },
+                {
+                    "fl":"送长辈",
+                    "style":"",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073092.jpg_220x240.jpg",
+                    "Cpmc": "恋心",
+                    "Instro": "蓝色永生玫瑰＋紫色永生玫瑰",
+                    "ItemCode": "1073092",
+                    "LinePrice": 448,
+                    "Price": 288
+                } 
+            ]
         },
         {
             "id":3,
-            "text":"特色产品"
+            "text":"特色产品",
+            "fenlei":[
+                {
+                    "fl":"送女友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg",
+                    "Cpmc": "花好月圆永生花台灯",
+                    "Instro": "精选进口奥斯汀永生玫瑰台灯",
+                    "ItemCode": "1073247",
+                    "LinePrice": 398,
+                    "Price": 298
+                },
+                {
+                    "fl":"送男性",
+                    "style":"畅销爆款",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg",
+                    "Cpmc": "我如此爱你-口红款520",
+                    "Instro": "Dior#520口红(专柜正品)＋进口永生玫瑰礼盒",
+                    "ItemCode": "1073186",
+                    "LinePrice": 788,
+                    "Price": 588
+                },
+                {
+                    "fl":"送朋友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073253.jpg_220x240.jpg",
+                    "Cpmc": "花漾年华-迪奥香水款30ml",
+                    "Instro": "Miss Dior花漾淡香氛",
+                    "ItemCode": "1073253",
+                    "LinePrice": 899,
+                    "Price": 799  
+                },
+                {
+                    "fl":"送长辈",
+                    "style":"",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073092.jpg_220x240.jpg",
+                    "Cpmc": "恋心",
+                    "Instro": "蓝色永生玫瑰＋紫色永生玫瑰",
+                    "ItemCode": "1073092",
+                    "LinePrice": 448,
+                    "Price": 288
+                } 
+            ]
         },
         {
             "id":4,
-            "text":"设计师款"
+            "text":"设计师款",
+            "fenlei":[
+                {
+                    "fl":"送女友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg",
+                    "Cpmc": "花好月圆永生花台灯",
+                    "Instro": "精选进口奥斯汀永生玫瑰台灯",
+                    "ItemCode": "1073247",
+                    "LinePrice": 398,
+                    "Price": 298
+                },
+                {
+                    "fl":"送男性",
+                    "style":"畅销爆款",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg",
+                    "Cpmc": "我如此爱你-口红款520",
+                    "Instro": "Dior#520口红(专柜正品)＋进口永生玫瑰礼盒",
+                    "ItemCode": "1073186",
+                    "LinePrice": 788,
+                    "Price": 588
+                },
+                {
+                    "fl":"送朋友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073253.jpg_220x240.jpg",
+                    "Cpmc": "花漾年华-迪奥香水款30ml",
+                    "Instro": "Miss Dior花漾淡香氛",
+                    "ItemCode": "1073253",
+                    "LinePrice": 899,
+                    "Price": 799  
+                },
+                {
+                    "fl":"送长辈",
+                    "style":"",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073092.jpg_220x240.jpg",
+                    "Cpmc": "恋心",
+                    "Instro": "蓝色永生玫瑰＋紫色永生玫瑰",
+                    "ItemCode": "1073092",
+                    "LinePrice": 448,
+                    "Price": 288
+                } 
+            ]
         },
         {
             "id":5,
-            "text":"商务鲜花"
+            "text":"商务鲜花",
+            "fenlei":[
+                {
+                    "fl":"送女友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg",
+                    "Cpmc": "花好月圆永生花台灯",
+                    "Instro": "精选进口奥斯汀永生玫瑰台灯",
+                    "ItemCode": "1073247",
+                    "LinePrice": 398,
+                    "Price": 298
+                },
+                {
+                    "fl":"送男性",
+                    "style":"畅销爆款",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg",
+                    "Cpmc": "我如此爱你-口红款520",
+                    "Instro": "Dior#520口红(专柜正品)＋进口永生玫瑰礼盒",
+                    "ItemCode": "1073186",
+                    "LinePrice": 788,
+                    "Price": 588
+                },
+                {
+                    "fl":"送朋友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073253.jpg_220x240.jpg",
+                    "Cpmc": "花漾年华-迪奥香水款30ml",
+                    "Instro": "Miss Dior花漾淡香氛",
+                    "ItemCode": "1073253",
+                    "LinePrice": 899,
+                    "Price": 799  
+                },
+                {
+                    "fl":"送长辈",
+                    "style":"",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073092.jpg_220x240.jpg",
+                    "Cpmc": "恋心",
+                    "Instro": "蓝色永生玫瑰＋紫色永生玫瑰",
+                    "ItemCode": "1073092",
+                    "LinePrice": 448,
+                    "Price": 288
+                } 
+            ]
         },
         {
             "id":6,
-            "text":"巧克力"
+            "text":"巧克力",
+            "fenlei":[
+                {
+                    "fl":"送女友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg",
+                    "Cpmc": "花好月圆永生花台灯",
+                    "Instro": "精选进口奥斯汀永生玫瑰台灯",
+                    "ItemCode": "1073247",
+                    "LinePrice": 398,
+                    "Price": 298
+                },
+                {
+                    "fl":"送男性",
+                    "style":"畅销爆款",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg",
+                    "Cpmc": "我如此爱你-口红款520",
+                    "Instro": "Dior#520口红(专柜正品)＋进口永生玫瑰礼盒",
+                    "ItemCode": "1073186",
+                    "LinePrice": 788,
+                    "Price": 588
+                },
+                {
+                    "fl":"送朋友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073253.jpg_220x240.jpg",
+                    "Cpmc": "花漾年华-迪奥香水款30ml",
+                    "Instro": "Miss Dior花漾淡香氛",
+                    "ItemCode": "1073253",
+                    "LinePrice": 899,
+                    "Price": 799  
+                },
+                {
+                    "fl":"送长辈",
+                    "style":"",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073092.jpg_220x240.jpg",
+                    "Cpmc": "恋心",
+                    "Instro": "蓝色永生玫瑰＋紫色永生玫瑰",
+                    "ItemCode": "1073092",
+                    "LinePrice": 448,
+                    "Price": 288
+                } 
+            ]
         },
         {
             "id":7,
-            "text":"企业团购"
+            "text":"企业团购",
+            "fenlei":[
+                {
+                    "fl":"送女友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073247.jpg_220x240.jpg",
+                    "Cpmc": "花好月圆永生花台灯",
+                    "Instro": "精选进口奥斯汀永生玫瑰台灯",
+                    "ItemCode": "1073247",
+                    "LinePrice": 398,
+                    "Price": 298
+                },
+                {
+                    "fl":"送男性",
+                    "style":"畅销爆款",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073186.jpg_220x240.jpg",
+                    "Cpmc": "我如此爱你-口红款520",
+                    "Instro": "Dior#520口红(专柜正品)＋进口永生玫瑰礼盒",
+                    "ItemCode": "1073186",
+                    "LinePrice": 788,
+                    "Price": 588
+                },
+                {
+                    "fl":"送朋友",
+                    "style":"生日推荐",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073253.jpg_220x240.jpg",
+                    "Cpmc": "花漾年华-迪奥香水款30ml",
+                    "Instro": "Miss Dior花漾淡香氛",
+                    "ItemCode": "1073253",
+                    "LinePrice": 899,
+                    "Price": 799  
+                },
+                {
+                    "fl":"送长辈",
+                    "style":"",
+                    "url":"https://img01.hua.com/uploadpic/newpic/1073092.jpg_220x240.jpg",
+                    "Cpmc": "恋心",
+                    "Instro": "蓝色永生玫瑰＋紫色永生玫瑰",
+                    "ItemCode": "1073092",
+                    "LinePrice": 448,
+                    "Price": 288
+                } 
+            ]
         }
     ]
 }
