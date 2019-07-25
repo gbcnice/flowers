@@ -7,10 +7,10 @@
             <i class="iconfont">&#xe60e;</i>
         </header>
         <ol>
-            <li>综合</li>
-            <li>销量</li>
-            <li>价格</li>
-            <li>新品</li>
+            <li :class="{active:current=='综合'}" @click="changeCurrent('综合')">综合</li>
+            <li :class="{active:current=='销量'}" @click="changeCurrent('销量')">销量</li>
+            <li :class="{active:current=='价格'}" @click="changeCurrent('价格')">价格</li>
+            <li :class="{active:current=='新品'}" @click="changeCurrent('新品')">新品</li>
         </ol>
         <ul>
             <li v-for="(item,index) in str" :key="index" @click="changeStyle(item)">
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import {sort} from "../store/index.js"
 export default {
     data() {
         return {
@@ -36,7 +37,9 @@ export default {
             list:[],
             str:"",
             style:"all",
-            brr:[]
+            brr:[],
+            current:"综合",
+            crr:[]
         }
     },
     created() {
@@ -56,20 +59,42 @@ export default {
         }
     },
     methods:{
+        changeCurrent(type){
+            this.current = type
+            switch(type){
+                case '价格':{
+                    sort('Price',this.list.fenlei)
+                    break;
+                }
+                case '销量':{
+                    sort('num',this.list.fenlei)
+                    break;
+                }
+                case '新品':{
+                    sort('new',this.list.fenlei)
+                    break;
+                }
+                case '综合':{
+                    sort('ItemCode',this.list.fenlei)
+                    break;
+                }
+            }
+        },
         godetail(idx){
             this.$router.push("/detail/"+idx+"/"+this.text.id)
         },
         getData(){
             this.text = this.$route.params
             this.$axios.get("http://localhost:4000/secdetail/"+this.text.id).then((res)=>{
-            this.list = res.data;
-            var set = new Set([]);
-            var arr = this.list.fenlei;
+                this.crr = res.data;
+                this.list = res.data;
+                var set = new Set([]);
+                var arr = this.list.fenlei;
+                sort('ItemCode',this.list.fenlei)
                 arr.forEach((item) => {
                     set.add(item.fl);
                 });
                 this.str = [...set]
-                // console.log(this.str)
             })
         },
         changeStyle(item){
@@ -165,5 +190,8 @@ export default {
             }
         } 
     }
+}
+.active{
+    color: $active;
 }
 </style>
