@@ -4,7 +4,7 @@
             <v-touch class="fenlei-search iconfont" @tap="back">&#xe517;</v-touch>
             <div class="fenlei-input">
                 <i class="iconfont">&#xe63c;</i>
-                <input type="text" value="请输入关键词">
+                <input type="text" placeholder="请输入关键词" v-model="content" @keyup.enter="goSearch">
             </div>
         </div>
         <figure>
@@ -40,20 +40,24 @@ export default {
         return{
             type:"hot",
             list:[],
-            current:1
+            current:1,
+            content:""
         }
     },
     created(){
         this.getData()
     },
     methods:{
+        goSearch(){
+            this.$router.push("/search/"+this.content)
+        },
         getData(){
             if(!this.type)
             this.type = "hot"
             this.$axios.get("http://localhost:4000/"+this.type).then((res)=>{
                  // console.log(res.data[0]);
                 this.list = res.data[0];
-               console.log(this.list)
+            //    console.log(this.list)
             })
             let params = {
                 itemcodes:9010966
@@ -76,7 +80,7 @@ export default {
     watch:{
         $route:{
         handler(newV){
-            console.log(newV)
+            // console.log(newV)
             this.type=newV.params.type;
             this.current = newV.params.type;
             if(newV.path == "/home/fenlei"){
@@ -112,6 +116,7 @@ export default {
         background: #E9ECF0;
         border-radius: 5px; 
         input{
+            outline: none;
             border:none;
             color: #71797F;
             background: #E9ECF0;

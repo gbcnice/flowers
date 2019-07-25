@@ -5,6 +5,7 @@ import indexDetail from './views/indexDetail.vue'
 import designflower from './views/designflower.vue'
 import Secdetail from './views/secdetail.vue'
 import Detail from "./components/detail.vue"
+import Search from "./components/search.vue"
 const Car = () => import('./views/car.vue')
 const Fenlei = () => import('./views/fenlei.vue')
 const Index = () => import('./views/index.vue')
@@ -24,6 +25,11 @@ export default new Router({
       path: '/indexDetail',
       name: 'indexDetail',
       component: indexDetail
+    },
+    {
+      path: '/search/:text',
+      name: 'search',
+      component: Search
     },
     {
       path:'/designflower',
