@@ -86,23 +86,43 @@
             <div class="yimianxuanhuo-rxtj">
                 <ul>
                     <li class="yimianxuanhua-rexiaobang">
-                        <span>热销榜</span><br>
-                        <span>集万千宠爱</span>
+                        <span class="ymxh-rsb">热销榜</span><br>
+                        <span class="ymxh-qw">集万千宠爱</span>
                     </li>
                     <li class="yimianxuanhua-tejia">
-
+                        <span class="ymxh-rsb">特价专区</span><br>
+                        <span class="ymxh-qw">超值好货</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="ymxh-xp">
+                <ul>
+                    <li class="xp-1">
+                        <span>新品来袭</span>
+                    </li>
+                    <li class="xp-2">
+                        <span>品味之选</span>
+                    </li>
+                    <li class="xp-3">
+                        <span>设计师甄选</span>
                     </li>
                 </ul>
             </div>
             </div>
+            <div class="lr">
+                <span>送恋人/爱情鲜花</span>
+            </div>
+            <myXuan />
     </div>    
 </template>
 
 <script>
 import mySwiper from './mySwiper'
+import myXuan from './myXuan'
 export default {
     components:{
-        mySwiper
+        mySwiper,
+        myXuan
     }
 }
 </script>
@@ -217,8 +237,24 @@ export default {
         top: -1.7rem;
         left: .4rem;
     }
-    .yimiaoxuanhua .yimianxuanhuo-rxtj ul{
-        margin-left:.1rem; 
+    .yimiaoxuanhua .yimianxuanhuo-rxtj{
+        width: 100%;
+        height: 3.5rem;
+    }
+    .yimiaoxuanhua .yimianxuanhuo-rxtj ul li{
+        border: #E9ECF0 1px solid;
+        margin: .1rem 0 0 .05rem;
+    }
+
+    .yimiaoxuanhua .yimianxuanhuo-rxtj ul li span{
+        display: inline-block;
+        
+    }
+    .yimiaoxuanhua .yimianxuanhuo-rxtj ul li .ymxh-rsb{
+       margin: .3rem 0 0 .3rem;
+    }
+    .yimiaoxuanhua .yimianxuanhuo-rxtj ul li .ymxh-qw{
+       margin-left: .3rem;
     }
     .yimiaoxuanhua .yimianxuanhuo-rxtj ul .yimianxuanhua-rexiaobang{
         float: left;
@@ -231,9 +267,48 @@ export default {
          float: left;
         width: 3.64rem;
         height: 3.2rem;
-        background: url(https://img02.hua.com/m/home/img/m_home_ranklist.png?0718) no-repeat center;
+        background: url(https://img02.hua.com/m/home/img/m_home_special.png?0718) no-repeat center;
         background-size:100%;
     }
+    .yimiaoxuanhua .ymxh-xp{
+        width: 100%;
+        height: 2.6rem;
+    }
+    .yimiaoxuanhua .ymxh-xp ul li{
+        height: 2.6rem;
+        width: 2.34rem;
+        float: left;
+        margin-left: .12rem;
+        text-align: center;
+    }
+     .yimiaoxuanhua .ymxh-xp ul .xp-1 span,.yimiaoxuanhua .ymxh-xp ul .xp-2 span,.yimiaoxuanhua .ymxh-xp ul .xp-3 span{
+         display: inline-block;
+         margin-top: 2.1rem;
+     }
+     .yimiaoxuanhua .ymxh-xp ul .xp-1{
+        background: url(https://img02.hua.com/m/home/img/m_home_category_new.png?0718) no-repeat center;
+        background-size:100%;
+        
+     }
+     .yimiaoxuanhua .ymxh-xp ul .xp-2{
+        background: url(https://img02.hua.com/m/home/img/m_home_category_quality.png?0718) no-repeat center;
+        background-size:100%;
+
+     }
+     .yimiaoxuanhua .ymxh-xp ul .xp-3{
+        background: url(https://img02.hua.com/m/home/img/m_home_category_you.png?0718) no-repeat center;
+        background-size:100%;
+
+     }
+     .lr{
+         width: 100%;
+         height: 1.2rem;
+         text-align: center;
+         line-height: 1.2rem;
+         background: #fff;
+         color: #232628;
+         font-size: .3rem;
+     }
 
 
 </style>
