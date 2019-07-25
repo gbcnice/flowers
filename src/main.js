@@ -8,6 +8,8 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import './assets/index.css'
 import { Indicator } from 'mint-ui';
+import VueTouch from "vue-touch"
+Vue.use(VueTouch,{name:'v-touch'})
 import '../public/iconfont/iconfont.css'
 Vue.config.productionTip = false
 Vue.use(MintUI)
