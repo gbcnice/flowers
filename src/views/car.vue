@@ -1,8 +1,8 @@
 <template>
     <div class="car">
         <header class="header-T">
-              <span class="iconfont">&#xe517;</span>
-              <h2 v-on:click="clickAdd">购物车</h2>
+              <span class="iconfont" @click="back">&#xe517;</span>
+              <h2>购物车</h2>
               <span class="iconfont">&#xe60e;</span>
          </header>
         <div v-if="logoin"><CarItem></CarItem></div>
@@ -17,16 +17,21 @@ import CarItem2 from './cartitem2'
 export default {
     data(){
         return {
-            logoin:true
+            logoin:false
         }
+    },
+    created(){
+        //  this.$route.query.flag; 
+        //  console.log( this.$route.query.flag)
+        //  this.logoin= this.$route.query.flag
     },
      components:{
            CarItem,
            CarItem2
      },
      methods:{
-         clickAdd(){
-             this.logoin=!this.logoin
+         back(){
+             this.$router.back()
          }
      }
 }

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import indexDetail from './views/indexDetail.vue'
 import designflower from './views/designflower.vue'
+import cartitem2 from './views/cartitem2.vue'
 import Secdetail from './views/secdetail.vue'
 import Detail from "./components/detail.vue"
 const Car = () => import('./views/car.vue')
@@ -59,7 +60,7 @@ export default new Router({
         {
           path: '/home/car',
           name: 'car',
-          component: Car
+          component: Car,
         },
         {
           path: '/home/my',

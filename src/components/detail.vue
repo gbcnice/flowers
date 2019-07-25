@@ -22,8 +22,8 @@
         <footer>
             <div><i class="iconfont">&#xe76f;</i><span @click="go('/home/index')">首页</span></div>
             <div><i class="iconfont">&#xe503;</i><span @click="go('/home/car')">购物车</span></div>
-            <div><span class="imme">加入购物车</span></div>
-            <div><span class="add">立即购买</span></div>
+            <div><span class="imme" @click="add({...info,count:1})">加入购物车</span></div>
+            <div><span class="add" @click="nowBuy">立即购买</span></div>
         </footer>
     </div>
 </template>
@@ -32,6 +32,7 @@
 import swiper from "../components/swiper.vue"
 import Swiper from "swiper"
 import "swiper/dist/css/swiper.css"
+import {mapState,mapActions,mapMutations} from 'vuex'
 export default {
     
     components:{
@@ -39,13 +40,15 @@ export default {
     },
     data(){
         return {
+            flag:false,
             idx:this.$route.params.id,
             info:[],
             id:this.$route.params.num,
             Cpmc:"",
             Instro:"",
             Price:"",
-            LinePrice:""
+            LinePrice:"",
+            url:""
         }
     },
     created(){
@@ -57,18 +60,26 @@ export default {
             this.info=res.data[0].fenlei.filter((item)=>{
                 return (item.ItemCode == this.idx)
             })
+            this.info = this.info[0]
             console.log(this.info[0])
-            this.url = this.info[0].url
-            this.Cpmc = this.info[0].Cpmc
-            this.Instro = this.info[0].Instro
-            this.LinePrice = this.info[0].LinePrice
-            this.Price = this.info[0].Price
+            this.url = this.info.url
+            this.Cpmc = this.info.Cpmc
+            this.Instro = this.info.Instro
+            this.LinePrice = this.info.LinePrice
+            this.Price = this.info.Price
         })
     },
+     computed:{
+   	 ...mapState(["products","products"])
+   },
     methods:{
         go(path){
             this.$router.push(path)
         },
+        nowBuy(flag){
+         this.$router.push({name:'car',query:{flag:flag}})   
+        },
+        ...mapMutations(["add"]),
         back(){
             this.$router.back()
         }
