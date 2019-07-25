@@ -8,7 +8,7 @@
             </div>
         </div>
         <figure>
-            <ul>
+            <ul>  
                 <li @click="changeindex('hot')"  :class="{active:current=='hot'}"><router-link to="/home/fenlei/hot">热门推荐</router-link></li>
                 <li @click="changeindex('flower')" :class="{active:current=='flower'}"><router-link to="/home/fenlei/flower">鲜花</router-link></li>
                 <li @click="changeindex('longflower')" :class="{active:current=='longflower'}"><router-link to="/home/fenlei/longflower">永生花</router-link></li>
@@ -50,8 +50,9 @@ export default {
             if(!this.type)
             this.type = "hot"
             this.$axios.get("http://localhost:4000/"+this.type).then((res)=>{
-                console.log(res.data[0])
+                
                 this.list = res.data[0];
+               console.log(this.list)
             })
         },
         back() {
@@ -62,12 +63,13 @@ export default {
         },
         changeindex(index) {
             this.current = index
-            console.log(this.current)
+            // console.log(this.current)
         }
     }, 
     watch:{
         $route:{
         handler(newV){
+            console.log(newV)
             this.type=newV.params.type;
             this.current = newV.params.type;
             if(newV.path == "/home/fenlei"){

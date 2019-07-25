@@ -6,6 +6,7 @@ import Fenlei from './views/fenlei.vue'
 import Car from './views/car.vue'
 import My from './views/my.vue'
 import indexDetail from './views/indexDetail.vue'
+import designflower from './views/designflower.vue'
 import Secdetail from './views/secdetail.vue'
  
 Vue.use(Router)
@@ -22,6 +23,11 @@ export default new Router({
       path: '/indexDetail',
       name: 'indexDetail',
       component: indexDetail
+    },
+    {
+      path:'/designflower',
+      name:'designflower',
+      component:designflower
     },
     {
       path: '/secdetail/:id',

@@ -43,6 +43,44 @@
             "title":"500万用户信赖好评"
         }
     ],
+    "cart":[
+          {
+              "id":1,
+              "img":"//img01.hua.com/uploadpic/newpic/9010966.jpg",
+               "item":"精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎",
+               "price":"￥239"
+          },
+          {
+            "id":2,
+            "img":"//img01.hua.com/uploadpic/newpic/9012177.jpg",
+             "item":"不变的承诺",
+             "price":"￥539"
+        },
+        {
+            "id":3,
+            "img":"//img01.hua.com/uploadpic/newpic/9010011.jpg",
+             "item":"玫瑰11枝，粉色勿忘我0.3扎",
+             "price":"￥139"
+        },
+        {
+            "id":4,
+            "img":"//img01.hua.com/uploadpic/newpic/9012154.jpg",
+             "item":"白玫瑰22枝，粉佳人粉玫瑰14枝，粉色桔梗5枝",
+             "price":"￥369"
+        },
+        {
+            "id":5,
+            "img":"//img01.hua.com/uploadpic/newpic/9010877.jpg",
+             "item":"红玫瑰11枝，满天星0.3扎，栀子叶0.5扎",
+             "price":"￥138"
+        },
+        {
+            "id":6,
+            "img":"//img01.hua.com/uploadpic/newpic/9012112.jpg",
+             "item":"戴安娜粉玫瑰12枝，石竹梅7枝",
+             "price":"￥202"
+        }
+    ],
     "team":[
         {
             "tit":[
@@ -79,7 +117,7 @@
                             "alt":"团购鲜花" 
                         }
                     ],
-                    "team-list":[
+                    "teamlist":[
                           {
                               "id":1,
                               "img":"https://img01.hua.com/zhuanti/qiyetuangou/images/tuangou_nav.png",

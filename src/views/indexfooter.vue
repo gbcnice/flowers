@@ -14,8 +14,8 @@
          </div>
          <div class="bottom-dev">
               <div class="bottom-item">
-                    <a  v-on:click="clickHandler('qytg')">企业团购</a>
-                    <a  v-on:click="clickHandler('sjsk')">设计师款</a>
+                    <a  v-on:click="clickHandler">企业团购</a>
+                    <a  v-on:click="clickDesign">设计师款</a>
                     <a >同城鲜花</a>
                     <a  >花语大全</a>
               </div>
@@ -65,8 +65,11 @@ export default {
         })
     },
     methods:{
-        clickHandler(type){
+        clickHandler(){
             this.$router.push('/indexDetail')
+        },
+        clickDesign(){
+           this.$router.push('/designflower') 
         }
     }
 }
@@ -82,6 +85,7 @@ export default {
 }
 .brand h3{
     width:100%;
+    box-sizing: border-box;
     text-align: center;
     padding:0.4rem 0;
     height:0.32rem;
@@ -94,6 +98,7 @@ export default {
 .brand .brand-list .brand-item{
     width:33%;
     text-align: center;
+     box-sizing: border-box;
     padding-bottom: 0.48rem;  
 }
 .brand .brand-list .brand-item>img{
@@ -107,8 +112,9 @@ export default {
 }
 .bottom-dev .bottom-item {
     width:100%;
-    height:0.48rem;
+    /* height:0.48rem; */
     display: flex;
+    box-sizing: border-box;
     padding:0.4rem 0 0.28rem 0;
     justify-content: space-around;
     text-align: center;
