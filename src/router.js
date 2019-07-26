@@ -7,6 +7,8 @@ import cartitem2 from './views/cartitem2.vue'
 import Secdetail from './views/secdetail.vue'
 import Detail from "./components/detail.vue"
 import Search from "./components/search.vue"
+import CityFlower from "./views/cityflower.vue"
+import FlowerGift from "./views/flowergift.vue"
 const Car = () => import('./views/car.vue')
 const Fenlei = () => import('./views/fenlei.vue')
 const Index = () => import('./views/index.vue')
@@ -36,6 +38,16 @@ export default new Router({
       path:'/designflower',
       name:'designflower',
       component:designflower
+    },
+    {
+      path:'/flowergift',
+      name:'flowergift',
+      component:FlowerGift
+    },
+    {
+      path:'/cityflower',
+      name:'CityFlower',
+      component:CityFlower
     },
     {
       path: '/secdetail/:id',

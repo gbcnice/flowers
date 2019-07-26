@@ -10,6 +10,7 @@
                <p>数量:</p><button @click="inc(item.ItemCode)">+</button>
                     <i>{{item.count}}</i>
             <button @click="dec(item.ItemCode)">-</button>
+            <button @click="delet(item.ItemCode)" class="del">删除</button>
             </section>
          
             <span>￥{{item.Price}}</span>
@@ -31,16 +32,23 @@ export default {
     ...mapGetters(["money", "count"])
   },
   methods: {
-    ...mapMutations(["add", "inc", "dec"])
+    ...mapMutations(["add", "inc", "dec","delet"])
   }
 };
 </script>
 
 <style>
+.about{
+   height:12rem;
+   position: relative;
+}
 .about .footer{
    width:100%;
    height:1rem;
    background-color: green;
+   margin-top:1.2rem;
+   position: absolute;
+   bottom:0.76rem;
    display: flex;
 }
 .about .footer-left{
@@ -56,10 +64,13 @@ export default {
     text-align: right;
    line-height:1rem;
 }
+.del{
+   margin-left:0.3rem;
+}
 .about .list{
    width:100%;
-   margin:0.2rem 0 0.4rem 0; 
-   height:5rem;
+   margin:0.2rem 0 0.4rem 0;
+   min-height: 1.2rem; 
    display: block;
 }
 .about .list .row span{
@@ -73,7 +84,7 @@ export default {
       margin-left:0.6rem;
 }
 .about .list li{
-   width: 6.62rem;
+   width: 100%;
    height:2.28rem;
    background-color: white;
    margin-bottom: 0.2rem;
@@ -86,7 +97,7 @@ export default {
    display: flex;
 }
 .about .list li section button {
-   width:0.5rem;
+   width:0.7rem;
    height:0.5rem;
 }
 .about .list li section i {
@@ -98,7 +109,8 @@ export default {
 }
 .about .list li img{
    width:2.08rem;
-   height:2.26rem;
+   height:2.08rem;
+   border:0;
 }
 .about .list li p{
    display: inline;
@@ -106,11 +118,13 @@ export default {
  .about .list .item-right{
     margin-top:0.2rem;
     width:4rem;
+     height:2.08rem;
     overflow: hidden;
-text-overflow:ellipsis;
-white-space: nowrap;
+    text-overflow:ellipsis;
+    white-space: nowrap;
  }
  .about .list .item-right p{
   font-size: 0.3rem;
+  margin-left:0.2rem;
  } 
 </style>

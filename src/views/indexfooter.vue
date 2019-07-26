@@ -16,8 +16,8 @@
               <div class="bottom-item">
                     <a  v-on:click="clickHandler">企业团购</a>
                     <a  v-on:click="clickDesign">设计师款</a>
-                    <a >同城鲜花</a>
-                    <a  >花语大全</a>
+                    <a  v-on:click="clickcity">同城鲜花</a>
+                    <a  v-on:click="clickgift">花语大全</a>
               </div>
               <div class="bottom-item">
                     <a href="#">花礼优势</a>
@@ -70,6 +70,12 @@ export default {
         },
         clickDesign(){
            this.$router.push('/designflower') 
+        },
+        clickcity(){
+            this.$router.push('/cityflower')
+        },
+        clickgift(){
+            this.$router.push('/flowergift')
         }
     }
 }

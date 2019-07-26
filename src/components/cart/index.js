@@ -1,12 +1,12 @@
+import { createDecipher } from "crypto";
+
 export default {
 	state: {
 		cart:sessionStorage.getItem("cart")?JSON.parse(sessionStorage.getItem("cart")).cart:[]
-	   
 	},
 	
   	getters:{
   		money(state){
-			  console.log(state)
   			var m=0;
   				state.cart.forEach((item)=>{
   					 m+=item.Price*item.count;
@@ -23,29 +23,25 @@ export default {
   	},
 	mutations: {
 		add(state,payload){
-			console.log(payload)
 			if(state.cart.length===0){
 				state.cart.push(payload);
 		}
-		else{	
-			console.log(state.cart[0])	   	   
+		else{		   	   
 			var flag = state.cart.some((item)=>{
 					 if(item.ItemCode===payload.ItemCode){
-							 item.count++;		   	  	   	
+							 item.count++;
 							 return true
 					 }
 					 else{
 							return false;
 					 }
 			  });
-		
-			 if(!flag)
-			 {
+			 if(!flag){
 				  state.cart.push(payload);
 			  }
-			  
+			 
 		}
-		localStorage.setItem("cart",JSON.stringify(state))
+		sessionStorage.setItem("cart",JSON.stringify(state))
 		},
 		inc(state,id){
 			state.cart.forEach((item)=>{
@@ -58,10 +54,21 @@ export default {
 		dec(state,id){
 			state.cart.forEach((item)=>{
 				if(item.ItemCode===id){
-					if(item.count>0){
+					if(item.count>1){
 						item.count--;
+					}else{
+						item.count=1
 					}	
 				}
+			})
+			sessionStorage.setItem("cart",JSON.stringify(state))
+		},
+		delet(state,id){
+			state.cart.forEach((item,index)=>{
+				if(item.ItemCode===id){
+					state.cart.splice(index,1)
+				}
+				
 			})
 			sessionStorage.setItem("cart",JSON.stringify(state))
 		}

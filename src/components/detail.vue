@@ -19,9 +19,13 @@
                <p><span class="iconfont">&#xe635;</span> APP下单立减3元<i class="iconfont">&#xe604;</i></p>
             </div>
         </div>
-        <footer>
+        <footer class="carfooter">
             <div><i class="iconfont">&#xe76f;</i><span @click="go('/home/index')">首页</span></div>
-            <div><i class="iconfont">&#xe503;</i><span @click="go('/home/car')">购物车</span></div>
+            <div>
+                <i class="iconfont">&#xe503;</i>
+                <span @click="go('/home/car')">购物车</span>
+                <nav>{{count}}</nav>
+            </div>
             <div><span class="imme" @click="add({...info,count:1})">加入购物车</span></div>
             <div><span class="add" @click="nowBuy">立即购买</span></div>
         </footer>
@@ -32,7 +36,7 @@
 import swiper from "../components/swiper.vue"
 import Swiper from "swiper"
 import "swiper/dist/css/swiper.css"
-import {mapState,mapActions,mapMutations} from 'vuex'
+import {mapState,mapActions,mapMutations,mapGetters} from 'vuex'
 export default {
     
     components:{
@@ -61,7 +65,6 @@ export default {
                 return (item.ItemCode == this.idx)
             })
             this.info = this.info[0]
-            console.log(this.info[0])
             this.url = this.info.url
             this.Cpmc = this.info.Cpmc
             this.Instro = this.info.Instro
@@ -70,7 +73,8 @@ export default {
         })
     },
      computed:{
-   	 ...mapState(["products","products"])
+        ...mapState(["products","products"]),
+         ...mapGetters([ "count"])
    },
     methods:{
         go(path){
@@ -225,4 +229,20 @@ export default {
 .detail .swiper-container{
     height: 8.18rem;
 }
+.carfooter{
+    position:relative;
+}
+footer nav {
+    width:0.3rem;
+    height:0.3rem;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    line-height: 0.3rem;
+    position:absolute;
+    left:2.5rem;
+    top:0.1rem;
+    color:white;
+    font-size:0.1rem;
+    }
 </style>
