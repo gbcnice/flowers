@@ -14,6 +14,9 @@
             <span class="iconfont like">&#xe772;</span>
         </div>
         <section></section>
+        <div>
+            <Address ref="addre"/>
+        </div>
         <div class="zhekou">
             <div>
                <p><span class="iconfont">&#xe635;</span> APP下单立减3元<i class="iconfont">&#xe604;</i></p>
@@ -22,9 +25,10 @@
         <footer>
             <div><i class="iconfont">&#xe76f;</i><span @click="go('/home/index')">首页</span></div>
             <div><i class="iconfont">&#xe503;</i><span @click="go('/home/car')">购物车</span></div>
-            <div><span class="imme" @click="add({...info,count:1})">加入购物车</span></div>
+            <div><span class="imme" @click="add({...info,count:1}),addcity()">加入购物车</span></div>
             <div><span class="add" @click="nowBuy">立即购买</span></div>
         </footer>
+        
     </div>
 </template>
 
@@ -32,14 +36,17 @@
 import swiper from "../components/swiper.vue"
 import Swiper from "swiper"
 import "swiper/dist/css/swiper.css"
+import Address from "./address"
 import {mapState,mapActions,mapMutations} from 'vuex'
 export default {
     
     components:{
-        swiper
+        swiper,
+        Address
     },
     data(){
         return {
+            have:false,
             flag:false,
             idx:this.$route.params.id,
             info:[],
@@ -61,7 +68,6 @@ export default {
                 return (item.ItemCode == this.idx)
             })
             this.info = this.info[0]
-            console.log(this.info[0])
             this.url = this.info.url
             this.Cpmc = this.info.Cpmc
             this.Instro = this.info.Instro
@@ -73,6 +79,11 @@ export default {
    	 ...mapState(["products","products"])
    },
     methods:{
+        addcity(){
+            this.have = true;
+            // console.log(this.$refs.addre.choseAdd())
+            this.$refs.addre.choseAdd()
+        },
         go(path){
             this.$router.push(path)
         },

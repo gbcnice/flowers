@@ -6,7 +6,7 @@ export default {
 	
   	getters:{
   		money(state){
-			  console.log(state)
+			//   console.log(state)
   			var m=0;
   				state.cart.forEach((item)=>{
   					 m+=item.Price*item.count;
@@ -23,12 +23,12 @@ export default {
   	},
 	mutations: {
 		add(state,payload){
-			console.log(payload)
+			// console.log(payload)
 			if(state.cart.length===0){
 				state.cart.push(payload);
 		}
 		else{	
-			console.log(state.cart[0])	   	   
+			// console.log(state.cart[0])	   	   
 			var flag = state.cart.some((item)=>{
 					 if(item.ItemCode===payload.ItemCode){
 							 item.count++;		   	  	   	
@@ -45,7 +45,8 @@ export default {
 			  }
 			  
 		}
-		localStorage.setItem("cart",JSON.stringify(state))
+		sessionStorage.setItem("cart",JSON.stringify(state))
+		console.log()
 		},
 		inc(state,id){
 			state.cart.forEach((item)=>{

@@ -17,10 +17,14 @@ import CarItem2 from './cartitem2'
 export default {
     data(){
         return {
-            logoin:false
+            logoin:true
         }
     },
     created(){
+        console.log(sessionStorage)
+        if(sessionStorage.getItem("cart")){
+            this.logoin = false
+        }
         //  this.$route.query.flag; 
         //  console.log( this.$route.query.flag)
         //  this.logoin= this.$route.query.flag
