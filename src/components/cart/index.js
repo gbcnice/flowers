@@ -7,10 +7,7 @@ export default {
 	
   	getters:{
   		money(state){
-<<<<<<< HEAD
-=======
 			//   console.log(state)
->>>>>>> bbc7483f17fb6f2d0464912f75ea374239148874
   			var m=0;
   				state.cart.forEach((item)=>{
   					 m+=item.Price*item.count;
@@ -27,19 +24,15 @@ export default {
   	},
 	mutations: {
 		add(state,payload){
-<<<<<<< HEAD
 			if(state.cart.length===0){
 				state.cart.push(payload);
 		}
-		else{		   	   
-=======
+		else{	
 			// console.log(payload)
 			if(state.cart.length===0){
 				state.cart.push(payload);
 		}
 		else{	
-			// console.log(state.cart[0])	   	   
->>>>>>> bbc7483f17fb6f2d0464912f75ea374239148874
 			var flag = state.cart.some((item)=>{
 					 if(item.ItemCode===payload.ItemCode){
 							 item.count++;
@@ -55,10 +48,7 @@ export default {
 			 
 		}
 		sessionStorage.setItem("cart",JSON.stringify(state))
-<<<<<<< HEAD
-=======
-		console.log()
->>>>>>> bbc7483f17fb6f2d0464912f75ea374239148874
+	}
 		},
 		inc(state,id){
 			state.cart.forEach((item)=>{

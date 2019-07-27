@@ -29,7 +29,7 @@
                 <span @click="go('/home/car')">购物车</span>
                 <nav>{{count}}</nav>
             </div>
-            <div><span class="imme" @click="add({...info,count:1})">加入购物车</span></div>
+            <div><span class="imme" @click="add({...info,count:1}),addcity()">加入购物车</span></div>
             <div><span class="add" @click="nowBuy">立即购买</span></div>
         </footer>
         
@@ -43,7 +43,6 @@ import "swiper/dist/css/swiper.css"
 import {mapState,mapActions,mapMutations,mapGetters} from 'vuex'
 
 import Address from "./address"
-import {mapState,mapActions,mapMutations} from 'vuex'
 export default {
     
     components:{
