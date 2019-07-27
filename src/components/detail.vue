@@ -14,6 +14,9 @@
             <span class="iconfont like">&#xe772;</span>
         </div>
         <section></section>
+        <div>
+            <Address ref="addre"/>
+        </div>
         <div class="zhekou">
             <div>
                <p><span class="iconfont">&#xe635;</span> APP下单立减3元<i class="iconfont">&#xe604;</i></p>
@@ -29,6 +32,7 @@
             <div><span class="imme" @click="add({...info,count:1})">加入购物车</span></div>
             <div><span class="add" @click="nowBuy">立即购买</span></div>
         </footer>
+        
     </div>
 </template>
 
@@ -37,13 +41,18 @@ import swiper from "../components/swiper.vue"
 import Swiper from "swiper"
 import "swiper/dist/css/swiper.css"
 import {mapState,mapActions,mapMutations,mapGetters} from 'vuex'
+
+import Address from "./address"
+import {mapState,mapActions,mapMutations} from 'vuex'
 export default {
     
     components:{
-        swiper
+        swiper,
+        Address
     },
     data(){
         return {
+            have:false,
             flag:false,
             idx:this.$route.params.id,
             info:[],
@@ -77,6 +86,11 @@ export default {
          ...mapGetters([ "count"])
    },
     methods:{
+        addcity(){
+            this.have = true;
+            // console.log(this.$refs.addre.choseAdd())
+            this.$refs.addre.choseAdd()
+        },
         go(path){
             this.$router.push(path)
         },

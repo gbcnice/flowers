@@ -110,19 +110,26 @@
             </div>
             </div>
             <div class="lr">
-                <span>送恋人/爱情鲜花</span>
+                <span>蛋糕推荐</span>
             </div>
             <myXuan />
+             <div class="lr">
+                <span>永生花</span>
+            </div>
+            <myYongsheng />
+            
     </div>    
 </template>
 
 <script>
 import mySwiper from './mySwiper'
 import myXuan from './myXuan'
+import myYongsheng from './myYongsheng'
 export default {
     components:{
         mySwiper,
-        myXuan
+        myXuan,
+        myYongsheng
     }
 }
 </script>
@@ -308,7 +315,7 @@ export default {
          background: #fff;
          color: #232628;
          font-size: .3rem;
+          margin-top: .2rem;
      }
-
 
 </style>

@@ -24,7 +24,9 @@
 </template>
 
 <script>
+import {mohusearch} from "../store/index.js"
 export default {
+    
     data(){
         return{
             content:this.$route.params,
@@ -47,24 +49,16 @@ export default {
     methods:{
         search(nr){
             this.$axios.get("http://localhost:4000/secdetail").then((res)=>{
-                var arr = res.data.filter((item)=>{
-                    item.fenlei.forEach((text)=>{
-                        if(text.Cpmc.includes(nr)){
-                            this.brr.push(text)
-                        }else if(text.Instro.includes(nr)){
-                            this.brr.push(text)
-                        }
-                    })
-                })
+                mohusearch(res.data,'fenlei','Cpmc','Instro',nr,this.brr)
                 this.length = this.brr.length
             })
         },
         goSearch(){
             this.brr = []
+            this.content.text = this.context
             this.search(this.context)
-            this.content = this.context
             this.context =""
-            
+            console.log(this.content)
             this.length = this.brr.length
         },
         godetail(idx){

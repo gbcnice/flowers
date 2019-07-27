@@ -21,9 +21,19 @@ export default {
         }
     },
     created(){
+<<<<<<< HEAD
        if(sessionStorage.getItem("cart")){
                this.logoin=false;
        }
+=======
+        console.log(sessionStorage)
+        if(sessionStorage.getItem("cart")){
+            this.logoin = false
+        }
+        //  this.$route.query.flag; 
+        //  console.log( this.$route.query.flag)
+        //  this.logoin= this.$route.query.flag
+>>>>>>> bbc7483f17fb6f2d0464912f75ea374239148874
     },
      components:{
            CarItem,

@@ -6,6 +6,7 @@ import designflower from './views/designflower.vue'
 import cartitem2 from './views/cartitem2.vue'
 import Secdetail from './views/secdetail.vue'
 import Detail from "./components/detail.vue"
+import Address from "./components/address.vue"
 import Search from "./components/search.vue"
 import CityFlower from "./views/cityflower.vue"
 import FlowerGift from "./views/flowergift.vue"
@@ -33,6 +34,11 @@ export default new Router({
       path: '/search/:text',
       name: 'search',
       component: Search
+    },
+    {
+      path: '/address',
+      name: 'address',
+      component: Address
     },
     {
       path:'/designflower',
